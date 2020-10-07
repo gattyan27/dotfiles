@@ -6,7 +6,7 @@ set-option -g status on
 set-option -g status-interval 2
 
 # prefixキーをC-\に変更する
-set-option -g prefix 'C-q'
+set-option -g prefix 'C-f'
 unbind C-b
 
 set-option -g default-terminal "screen-256color"
