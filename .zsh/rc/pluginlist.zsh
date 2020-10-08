@@ -303,7 +303,7 @@ zinit id-as=node as='readurl|command' \
   for https://nodejs.org/download/release/latest/
 
 # tmux
-if sudo ldconfig -p | grep -q 'libevent-' && sudo ldconfig -p | grep -q 'libncurses'; then
+if ldconfig -p | grep -q 'libevent-' && ldconfig -p | grep -q 'libncurses'; then
   zinit wait'0' lucid \
     from"gh-r" as"program" bpick"tmux-*.tar.gz" pick"*/tmux" \
     atclone"cd tmux*/; ./configure; make" \
