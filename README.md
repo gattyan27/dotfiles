@@ -19,7 +19,7 @@ My home dotfiles
 1. Download  
 
     ```bash
-    git clone https://github.com/yutakatay/dotfiles.git
+    git clone https://github.com/gattyan27/dotfiles.git
     ```
 
 1. Install  
