@@ -6,8 +6,12 @@ set-option -g status on
 set-option -g status-interval 2
 
 # prefixキーをC-\に変更する
-set-option -g prefix 'C-f'
+set-option -g prefix 'C-e'
 unbind C-b
+
+## アクティブなペインのみ白っぽく変更（真っ黒は232）
+set -g window-style 'bg=colour239'
+set -g window-active-style 'bg=colour232'
 
 set-option -g default-terminal "screen-256color"
 #set-option -g default-terminal "rxvt-unicode-256color"
