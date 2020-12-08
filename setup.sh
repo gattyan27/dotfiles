@@ -17,10 +17,10 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 # LANG=ja_JP.UTF-8
 
 # ユーザー追加
-useradd gattyan
-mkdir /home/gattyan/.ssh
-cp -a /home/ec2-user/.ssh/authorized_keys /home/gattyan/.ssh/
-chmod 700 /home/gattyan/.ssh
-chmod 600 /home/gattyan/.ssh/authorized_keys
-chown -R gattyan:gattyan /home/gattyan/.ssh
+sudo useradd gattyan
+sudo mkdir /home/gattyan/.ssh
+sudo cp -a /home/ec2-user/.ssh/authorized_keys /home/gattyan/.ssh/
+sudo chmod 700 /home/gattyan/.ssh
+sudo chmod 600 /home/gattyan/.ssh/authorized_keys
+sudo chown -R gattyan:gattyan /home/gattyan/.ssh
 
