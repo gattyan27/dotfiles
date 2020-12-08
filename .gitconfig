@@ -2,10 +2,14 @@
 	name = gattyan27
 	email = radio.radirer@gmail.com
 [alias]
+	fe = fetch
 	st = status
+	sw = switch
 	ck = checkout
 	pl = pull
 	ps = push
 	br = branch
 [credential]
 	helper = cache --timeout 604800
+[core]
+	editor = vim -c \"set fenc=utf-8\"
