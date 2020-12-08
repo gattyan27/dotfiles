@@ -24,3 +24,5 @@ sudo chmod 700 /home/gattyan/.ssh
 sudo chmod 600 /home/gattyan/.ssh/authorized_keys
 sudo chown -R gattyan:gattyan /home/gattyan/.ssh
 
+sudo mv ~/dotfiles /home/gattyan
+sudo chown -R gattyan:gattyan /home/gattyan/dotfiles
