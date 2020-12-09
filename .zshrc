@@ -89,6 +89,7 @@ zstyle ':prezto:load' pmodule \
 # alias
 alias t="tmux a"
 alias vi="vim"
+alias l="ls -al"
 
 # 環境変数
 export LANG=ja_JP.UTF-8
