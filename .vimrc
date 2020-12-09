@@ -1,7 +1,46 @@
 " ================================================================================
 " .vimrc
 " ================================================================================
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
+" Required:
+set runtimepath+=$HOME/dotfiles/.vim/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('$HOME/dotfiles/.vim/dein')
+  call dein#begin('$HOME/dotfiles/.vim/dein')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('$HOME/dotfiles/.vim/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here:
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#load_toml('~/.vim/dein/plugins.toml')
+
+  " You can specify revision/branch/tag.
+  call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
 
 " 文字コードを UFT-8 に設定する
 set fenc=utf-8
@@ -84,3 +123,40 @@ set hlsearch
 set tags=./tags;$HOME
 nnoremap <C-]> g<C-]>
 inoremap <C-]> <ESC>g<C-]>
+
+" キーバインド
+let mapleader = " "
+
+" phpactor
+" 画面を分割して定義元へのジャンプ
+function! DefinitionJumpWithPhpactor()
+    vsplit
+    call phpactor#GotoDefinition()
+endfunction
+
+
+" useの補完
+nmap <silent><Leader>u      :<C-u>call phpactor#UseAdd()<CR>
+" コンテキストメニューの起動(カーソル下のクラスやメンバに対して実行可能な選択肢を表示してくれます)
+nmap <silent><Leader>mm     :<C-u>call phpactor#ContextMenu()<CR>
+" ナビゲーションメニューの起動(クラスの参照元を列挙したり、他ファイルへのジャンプなど)
+nmap <silent><Leader>nn     :<C-u>call phpactor#Navigate()<CR>
+" カーソル下のクラスやメンバの定義元にジャンプ
+nmap <silent><Leader>o      :<C-u>call phpactor#GotoDefinition()<CR>
+" 編集中のクラスに対し各種の変更を加える(コンストラクタ補完、インタフェース実装など)
+nmap <silent><Leader>tt     :<C-u>call phpactor#Transform()<CR>
+" 新しいクラスを生成する(編集中のファイルに)
+nmap <silent><Leader>cc     :<C-u>call phpactor#ClassNew()<CR>
+" 選択した範囲を変数に抽出する
+nmap <silent><Leader>ee     :<C-u>call phpactor#ExtractExpression(v:false)<CR>
+" 選択した範囲を変数に抽出する
+vmap <silent><Leader>ee     :<C-u>call phpactor#ExtractExpression(v:true)<CR>
+" 選択した範囲を新たなメソッドとして抽出する
+vmap <silent><Leader>em     :<C-u>call phpactor#ExtractMethod()<CR>
+" split → jump
+nmap <silent><C-w><Leader>o :<C-u>call DefinitionJumpWithPhpactor()<CR>
+" カーソル下のクラスや変数の情報を表示する
+" 他のエディタで、マウスカーソルをおいたときに表示されるポップアップなどに相当
+vmap <silent><Leader>hh     :<C-u>call phpactor#Hover()<CR>
+
+autocmd FileType php setlocal omnifunc=phpactor#Complete
