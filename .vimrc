@@ -79,3 +79,8 @@ set incsearch
 set wrapscan
 " 検索語をハイライト表示する
 set hlsearch
+
+" 定義ジャンプ
+set tags=./tags;$HOME
+nnoremap <C-]> g<C-]>
+inoremap <C-]> <ESC>g<C-]>

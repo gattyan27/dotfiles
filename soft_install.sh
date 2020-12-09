@@ -15,3 +15,11 @@ sudo yum install -y tmux
 curl -sL https://rpm.nodesource.com/setup_12.x | sudo bash -
 sudo yum install -y --enablerepo=nodesource nodejs
 
+# ctagsインストール
+git clone https://github.com/universal-ctags/ctags.git
+cd ctags
+./autogen.sh 
+./configure --prefix=/usr/local
+make
+sudo make install
+sudo rm -rf ~/ctags
