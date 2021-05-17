@@ -2,11 +2,11 @@
 	name = gattyan27
 	email = radio.radirer@gmail.com
 [alias]
-	fe = fetch
+	fe = fetch --prune
 	st = status
 	sw = switch
 	ck = checkout
-	pl = pull
+	pl = pull --prune
 	ps = push
 	br = branch
 [credential]

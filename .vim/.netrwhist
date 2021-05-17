@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home'
-let g:netrw_dirhist_2='/home/ichikawa/fxss/admin'
-let g:netrw_dirhist_3='/home/ichikawa/fxss/admin/app'
-let g:netrw_dirhist_4='/home/ichikawa/fxss/admin/app/Http'
-let g:netrw_dirhist_5='/home/ichikawa/fxss/admin/app/Http/Controllers'
-let g:netrw_dirhist_6='/home/ichikawa/fxss/admin'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/ichikawa/fxss/admin/packages/Application/Admin'
+let g:netrw_dirhist_2='/home/ichikawa/fxss/admin/packages/Application'
+let g:netrw_dirhist_3='/home/ichikawa/fxss/admin/packages/Application/User'
+let g:netrw_dirhist_4='/home/ichikawa/fxss/user'
+let g:netrw_dirhist_5='/home/ichikawa/fxss/user/resources'
+let g:netrw_dirhist_6='/home/ichikawa/fxss/user/resources/views'
+let g:netrw_dirhist_7='/home/ichikawa/fxss/user/resources/views/auth'
+let g:netrw_dirhist_8='/home/ichikawa/fxss/client/resources/js'

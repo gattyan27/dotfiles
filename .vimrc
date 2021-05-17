@@ -102,7 +102,7 @@ set expandtab
 " 行頭以外の Tab 文字の表示幅 (スペースの数)
 set tabstop=4
 " 行頭での Tab 文字の表示幅
-set shiftwidth=2
+set shiftwidth=4
 
 
 " 検索
