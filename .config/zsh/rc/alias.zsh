@@ -150,6 +150,9 @@ alias transj='trans ja:'
 alias tj='trans ja:'
 alias te='trans :ja'
 
+# speedtest
+alias st='speedtest'
+
 
 #==============================================================#
 ##          improvement command                               ##
