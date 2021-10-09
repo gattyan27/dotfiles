@@ -78,3 +78,4 @@ if [ -n "$ZSHRC_CI_TEST" ]; then
   echo "zshrc load complete"
   exit
 fi
+
