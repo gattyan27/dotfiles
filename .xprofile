@@ -89,3 +89,10 @@ xset dpms 900 1200 1800
 #if builtin command -v "xkbcomp" > /dev/null 2>&1; then
 #  (cd $HOME/.xkb/xkm && xkbcomp -I$HOME/.xkb ~/.xkb/keymap/mykbd $DISPLAY 2> /dev/null)
 #fi
+
+export LANG="ja_JP.UTF-8"
+export XMODIFIERS="@im=fcitx"
+export XMODIFIER="@im=fcitx"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export DefaultIMModule=fcitx
