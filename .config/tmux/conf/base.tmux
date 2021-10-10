@@ -3,7 +3,7 @@
 #--------------------------------------------------------------#
 
 set-option -g status on
-set-option -g status-interval 2
+set-option -g status-interval 1
 
 # prefixキーをC-\に変更する
 set-option -g prefix 'C-\'

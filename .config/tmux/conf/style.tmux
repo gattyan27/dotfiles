@@ -58,7 +58,9 @@ set-window-option -g status-left ""
 #
 # Status bar right side
 #
-set-window-option -g status-right "#{prefix_highlight} #[bg=colour=236 fg=colour244]#S/#(tmux ls | wc -l | tr -d ' '):#I.#P #[bg=colour=236 fg=colour231]#{online_status} #(~/.config/tmux/conf/scripts/status-right.sh)"
+# original status-right
+#set-window-option -g status-right "#{prefix_highlight} #[bg=colour=236 fg=colour244]#S/#(tmux ls | wc -l | tr -d ' '):#I.#P #[bg=colour=236 fg=colour231]#{online_status} #(~/.config/tmux/conf/scripts/status-right.sh)"
+set-window-option -g status-right "#(tmux-mem-cpu-load --colors --interval 2)  Batt: #(sh ~/.config/tmux/conf/scripts/tmux_status_batt.sh) #{prefix_highlight} #[bg=colour=236 fg=colour244]#S/#(tmux ls | wc -l | tr -d ' '):#I.#P #[bg=colour=236 fg=colour231]#{online_status} #(~/.config/tmux/conf/scripts/status-right.sh)"
 set-window-option -g status-right-length 120
 
 
@@ -107,3 +109,6 @@ set-option -g display-panes-colour colour166 #orange
 set-window-option -g clock-mode-colour colour64 #green
 # bell
 set-window-option -g window-status-bell-style "fg=colour235,bg=colour160"
+
+# powerline for status bar
+#source "/usr/lib/python3.9/site-packages/powerline/bindings/tmux/powerline.conf"

@@ -4,8 +4,8 @@
 #==============================================================#
 
 ## common ##
-alias rm='rm-trash'
 alias del='rm -rf'
+alias rm='rm-trash'
 alias cp='cp -irf'
 alias mv='mv -i'
 alias ..='cd ..'
