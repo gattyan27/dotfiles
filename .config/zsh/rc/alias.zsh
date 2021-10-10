@@ -22,6 +22,12 @@ alias truecolor-terminal='export COLORTERM=truecolor'
 alias osc52='printf "\x1b]52;;%s\x1b\\" "$(base64 <<< "$(date +"%Y/%m/%d %H:%M:%S"): hello")"'
 alias makej='make -j$(nproc)'
 alias pacman='sudo pacman --noconfirm'
+alias torbr='torbrowser-launcher'
+alias n='nordvpn'
+alias nc='nordvpn connect'
+alias ncd='nordvpn connect Double_VPN'
+alias nd='nordvpn disconnect'
+alias vimtor='vim ~/.local/opt/tor-browser/app/Browser/TorBrowser/Data/Tor/torrc-defaults'
 
 # history
 alias history-mem='fc -rl'
