@@ -60,7 +60,7 @@ set-window-option -g status-left ""
 #
 # original status-right
 #set-window-option -g status-right "#{prefix_highlight} #[bg=colour=236 fg=colour244]#S/#(tmux ls | wc -l | tr -d ' '):#I.#P #[bg=colour=236 fg=colour231]#{online_status} #(~/.config/tmux/conf/scripts/status-right.sh)"
-set-window-option -g status-right "#(tmux-mem-cpu-load --colors --interval 2)  Batt: #(sh ~/.config/tmux/conf/scripts/tmux_status_batt.sh) #{prefix_highlight} #[bg=colour=236 fg=colour244]#S/#(tmux ls | wc -l | tr -d ' '):#I.#P #[bg=colour=236 fg=colour231]#{online_status} #(~/.config/tmux/conf/scripts/status-right.sh)"
+set-window-option -g status-right "#(tmux-mem-cpu-load --colors --interval 2)  Online: #{online_status}  Batt: #(sh ~/.config/tmux/conf/scripts/tmux_status_batt.sh) #{prefix_highlight} #[bg=colour=236 fg=colour244]#S/#(tmux ls | wc -l | tr -d ' '):#I.#P #[bg=colour=236 fg=colour231]#{online_status} #(~/.config/tmux/conf/scripts/status-right.sh)"
 set-window-option -g status-right-length 120
 
 
